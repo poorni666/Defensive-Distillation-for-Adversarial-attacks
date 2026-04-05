@@ -1,6 +1,10 @@
 # Defensive-Distillation-for-Adversarial-attacks
 
-The goal of this project is to introduce adversarial attacks on deep neural networks and report the impacts it has on the classification accuracy. Then , to introduce a defence mechanism to tackle the attack , defensive distillation is utilized here to make the deep neural network more robust aganist this attack and the impact on classification accuracies after the attack has been reported. The attack here used is Fast gradient Sign attack which is a gradient based attack focused on adding small pertubation to the images which causes the model to loose its robustness. The following paper is reimplemented https://arxiv.org/pdf/1511.04508 with experimentation of FSGN attack, the experimental setup of the paper is followed in this project as a base.
+The goal of this project is to study adversarial attacks on deep neural networks and evaluate their impact on classification accuracy. To defend against such attacks, this project implements **defensive distillation** as a method to improve the robustness of a neural network under adversarial perturbations.
+
+The attack used in this project is the **Fast Gradient Sign Method (FGSM)**, a gradient-based attack that adds small perturbations to input images in order to fool the model and reduce its robustness. This project reimplements the paper *Distillation as a Defense to Adversarial Perturbations* and follows its experimental setup as a foundation for evaluating the effect of defensive distillation under FGSM attacks.
+
+Paper reimplemented: https://arxiv.org/pdf/1511.04508
 
 ## Project Structure
 
@@ -17,11 +21,4 @@ Defensive-Distillation-for-Adversarial-attacks/
 │   └── utils.py
 ├── main.ipynb
 ├── README.md
-
-
-The workflow includes:
-
-- training a baseline model
-- generating adversarial examples with **FGSM**
-- training a student model using **soft labels** from a teacher network
-- evaluating both models under different perturbation strengths
+├── requirements.txt
