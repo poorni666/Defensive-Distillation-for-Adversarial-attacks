@@ -22,3 +22,6 @@ Defensive-Distillation-for-Adversarial-attacks/
 ├── main.ipynb
 ├── README.md
 ├── requirements.txt
+
+
+This project was built as part of final examination for Advanced topics in Machine Learning course at Units.
